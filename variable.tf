@@ -6,9 +6,7 @@ variable "account_id" {
 	description = "service account ID"
 }
 
-variable "projectid" {
-  type = string
-}
+
 }
 
 variable "display_name" {
