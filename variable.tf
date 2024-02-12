@@ -9,3 +9,9 @@ variable "account_id" {
 variable "projectid" {
   type = string
 }
+}
+
+variable "display_name" {
+	type = string
+	description = "service account display name"
+}
