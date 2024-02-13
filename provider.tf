@@ -11,3 +11,8 @@ provider "google" {
 
 provider "google-beta" {
 }
+provider "google" {
+  credentials = file("/path/to/credentials.json")
+
+  # other provider settings  
+}
