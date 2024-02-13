@@ -7,9 +7,14 @@ variable "account_id" {
 }
 
 
-
-
 variable "display_name" {
 	type = string
 	description = "service account display name"
+}
+variable "projectid" {
+  type = string
+}
+
+variable "prefix"{
+ type=string
 }
