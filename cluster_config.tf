@@ -14,7 +14,14 @@ resource "google_container_cluster" "primary" {
   remove_default_node_pool = true
   initial_node_count       = 1
 }
+# Create 4 GKE cluster instances
+resource "google_container_cluster" "primary" {
+  count = 4
+  name  = "montrealcollegecluster${count.index + 1}"
+  location = "us-central1"
 
+  # ... GKE cluster settings like node count, machine type etc
+}
 resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = "my-node-pool"
   location   = "us-central1"
